@@ -1,0 +1,50 @@
+
+
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\begin{document}
+
+\title{On the $D$ metric on $\mathbb R^{\mathbb N}$}
+\author{i.t., g.n.m.}
+\maketitle
+
+\setlength{\parindent}{0cm} 
+
+For $x,y \in \mathbb R^{\mathbb N}$ let $D(x,y) = \sup_{n \in \mathbb N} \frac{d(x_n,y_n)}{1 + d(x_n,y_n)}$ where $d(\cdot, \cdot)$ is the Euclidean metric. Let $B_D(x, \varepsilon)$ denote the open ball of radius $\varepsilon$ around $x$ with respect to the $D$ metric and let $B_d(x,\varepsilon)$ denote the standard Euclidean ball around $x$ of radius $\varepsilon$.
+\vspace{0.5cm}
+
+Then $\tau_{\text{prod}} \subsetneq \tau_D \subsetneq \tau_{\text{box}}$:
+\vspace{0.5cm}
+
+(i) $\tau_{\text{prod}} \subseteq \tau_D$: 
+\vspace{0.5cm}
+
+It is enough to show that a basis element of $\tau_{\text{prod}}$ is open in $\tau_D$. Let $O$ be a basis element of $\tau_{\text{prod}}$. Then $O$ is of the form $O_1 \times \dots O_n \times \mathbb R \times \dots$ where $O_i$ are open in $\mathbb R$ with the standard topology. Let $x$ be a point in $O$. Then there are $\varepsilon_i$ such that $B_d (x_i, \varepsilon_i) \subseteq O_i$ for $1 \le i \le n$. Let $\varepsilon = \min_i \varepsilon_i$. Then $B_D (x, \frac{\varepsilon}{ 1 + \varepsilon}) \subseteq O$:
+
+Let $y \in B_D (x, \frac{\varepsilon}{ 1 + \varepsilon}) $. Then for all $n$: $\frac{d(x_n, y_n)}{ 1 + d(x_n , y_n)} < \frac{\varepsilon}{1 + \varepsilon}$ and hence $d(x_n,y_n) < \varepsilon$ so that $y_i \in B_d(x_i, \varepsilon_i)$ for all $i \in \{1, \dots , n \}$. 
+\vspace{0.5cm}
+
+
+(ii) In fact, $\tau_{\text{prod}} \subsetneq \tau_D$:
+\vspace{0.5cm}
+
+Define $f_0 = (1,1,1,1, \dots ), f_1 = (0,1,1,1, \dots), f_2 = (0,0,1,1,\dots)$. Then $F= \{f_n\}_{n \in \mathbb N}$ is closed in $\tau_D$ but not closed in $\tau_{\text{prod}} $: Assume $f$ is an element not in $F$ such that $f_n \to f$ in $\tau_D$. Then since $\tau_{\text{prod}} \subseteq \tau_D$, also $f_n \to f$ in $\tau_{\text{prod}} $. Since $f_n \to 0$ in $\tau_{\text{prod}} $ and limits are unique in Hausdorff spaces it follows that $f=0$. Hence $0$ is the only limit point of $F$ in $\tau_{\text{prod}} $ and hence also in $\tau_D$. But $0$ is not a limit point of $F$ in $\tau_D$: Let $0 < \varepsilon < \frac12$. Then $B_D(0,\varepsilon)$ is a neighbourhood of $0$ not containing any of the $f_n$ because $D(f_n, 0) = \frac12 > \varepsilon$. 
+\vspace{0.5cm}
+
+
+(iii) $\tau_D \subseteq \tau_{\text{box}}$:
+\vspace{0.5cm}
+
+Let $B_D(x, \frac{\varepsilon}{1 + \varepsilon})$ be an open ball in the $D$-metric. Let $y \in B_D (x, \frac{\varepsilon}{1 + \varepsilon})$. Then for all $n$: $\frac{d(x_n,y_n)}{1+d(x_n,y_n)} < \frac{\varepsilon}{1+\varepsilon}$ from which it follows that $d(x_n,y_n) < \varepsilon$. Then since the ball is open there is $\delta $ such that $y \in B_D(y, \frac{\delta}{1+\delta}) \subseteq B_D(x,\frac{\varepsilon}{1+\varepsilon})$. Then $\prod_{n \in \mathbb N} (y_n - \frac{\delta}{2}, y + \frac{\delta}{2})$ is open in the box topology and contained in $B_D(y, \frac{\delta}{1+\delta})$: Let $z \in \prod_{n \in \mathbb N} (y_n - \frac{\delta}{2}, y_n + \frac{\delta}{2})$. Then for all $n$: $d(y_n, z_n) < \frac{\delta}{2}$. Hence $\frac{d(y_n, z_n)}{1+d(y_n,z_n)} < \frac{\frac{\delta}{2}}{1 + \frac{\delta}{2}}$. Hence $\sup_{n \in \mathbb N} \frac{d(y_n, z_n)}{1 + d(y_n , z_n)} \le \frac{\delta}{2} < \delta$ and hence $\prod_{n \in \mathbb N} (y_n - \frac{\delta}{2}, y + \frac{\delta}{2}) \subseteq B_D(y, \frac{\delta}{1+\delta})$.
+\vspace{0.5cm}
+
+
+(iv) In fact, $\tau_D \subsetneq \tau_{\text{box}}$:
+\vspace{0.5cm}
+
+$\prod_{n \in \mathbb N} (-\frac{1}{n}, \frac{1}{n})$ is open in the box topology but not open in $\tau_D$: Consider $0$ in $\prod_{n \in \mathbb N} (-\frac{1}{n}, \frac{1}{n})$ and let $B_D (0, \frac{\varepsilon}{1+\varepsilon})$ be an open $D$-ball around $0$ for $\varepsilon = \frac{1}{N}$. Then for all $n$: $\frac{d(x_n,0)}{1 d(x_n,0)} < \frac{\varepsilon}{1 + \varepsilon}$ hence  $d(x_n,0) < \varepsilon = \frac{1}{N}$. In particular, the point $c = (\frac{1}{N+1}, \frac{1}{N+1}, \frac{1}{N+1}, \dots )$ is in $B_D(0, \frac{\varepsilon}{1+ \varepsilon})$ but not in $\prod_{n \in \mathbb N} (-\frac{1}{n}, \frac{1}{n})$. Hence there is no $D$-ball around zero contained in $\prod_{n \in \mathbb N} (-\frac{1}{n}, \frac{1}{n})$ and hence $\prod_{n \in \mathbb N} (-\frac{1}{n}, \frac{1}{n})$ is not open in $\tau_D$.
+
+
+
+\end{document}
